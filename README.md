@@ -5,9 +5,9 @@
 
 There are three main features of the website:
 
-responsive web design using bootstrap(CSS).
-using redux state to be able to add items in the cart and able to purchase from checkout page.
-using stripe to make transaction.
+1. responsive web design using bootstrap(CSS).
+2. using redux state to be able to add items in the cart and able to purchase from checkout page.
+3. using stripe to make transaction.
 
 ### Motivation
 The purpose of project was to get familiar with React, React Hook, responsive web design, and Redux state.
