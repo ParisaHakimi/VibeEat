@@ -1,7 +1,7 @@
 # Redux-Vibe Eat
 
 ### Summary
-Redux-Vibe Eat is created using React, React Hooks, React Router, and Redux.
+"Redux-Vibe Eat" is created using React, React Hooks, React Router, and Redux.
 
 There are three main features of the website:
 
@@ -15,3 +15,4 @@ The purpose of project was to get familiar with React, React Hook, responsive we
 ### Getting Started
 Install dependencies of bottom
 
+in progress...
