@@ -6,9 +6,7 @@
 There are three main features of the website:
 
 responsive web design using bootstrap(CSS).
-
 using redux state to be able to add items in the cart and able to purchase from checkout page.
-
 using stripe to make transaction.
 
 ### Motivation
