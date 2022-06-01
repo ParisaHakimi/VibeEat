@@ -26,9 +26,247 @@ a {
   max-width: 100%;
 }
 .header nav {
-  background-color: rgba(51, 51, 51, 0.8);
+  background-color: rgba(51, 51, 51, 0.9);
 }
 .header nav button {
-  /* color: white; */
   background-color: aliceblue;
+}
+.header .cmt {
+  margin: 6rem auto;
+  padding: 4rem;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.header .cmt .orderLink,
+.learnMore-aboutUs,
+.menu-option > .orderLink,
+.HomePageFooter .cmt .book-now {
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.about img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+.learnMore-aboutUs {
+  background-color: #ad7676;
+}
+@media (max-width: 770px) {
+  .header .cmt {
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  .about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-img-container {
+    width: 100%;
+  }
+  .about a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about a img {
+    width: 90%;
+  }
+  .about-description {
+    width: 100%;
+  }
+  .about .about-description h3 {
+    text-align: center;
+  }
+}
+
+/* homepage menu and chefs sections */
+#menu,
+#chef {
+  border-top: 1px solid grey;
+}
+.menu-option {
+  width: 70%;
+  background-color: #ad7676;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu-option .menu-type {
+  width: 49%;
+  margin-bottom: 1rem;
+  background-color: #f6f6f6;
+}
+.menu-option .menu-type .menu-img-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.menu-option .menu-type .menu-img-section > img {
+  width: 100%;
+  height: 13rem;
+}
+.overlay::after {
+  content: "";
+  background-color: rgba(128, 128, 128, 0.3);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.menu-option .menu-type .menu-img-section:hover > .overlay::after {
+  background-color: transparent;
+  opacity: 0;
+}
+.menu-option .menu-type a {
+  color: black;
+}
+.menu-option > .orderLink {
+  margin: 0 auto;
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .menu-option {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-option .menu-type {
+    width: 90%;
+  }
+  .menu-option .menu-type .menu-img-section > img {
+    max-height: 15rem;
+  }
+  .menu-option > .orderLink {
+    width: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .menu-option .menu-type .menu-img-section > img {
+    max-height: 9rem;
+  }
+}
+@media (max-width: 320px) {
+  .menu-option .menu-type .menu-img-section > img {
+    max-height: 6rem;
+  }
+}
+
+/* homepage chef section */
+.chef-option {
+  width: 90%;
+}
+
+.menu-option .menu-type .chef-img-section {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.menu-option .menu-type .chef-img-section > img {
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+}
+.chef-des {
+  text-align: center;
+}
+.description > h5 {
+  transition: 0.5s;
+}
+.description > ul {
+  padding: 0px;
+  width: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+.menu-option .chef-card:hover .chef-img-section {
+  transform: translateY(1.5rem) scale(1.2);
+}
+.menu-option .chef-card:hover .description .chef-des {
+  opacity: 0;
+}
+.menu-option .chef-card:hover .description > h5 {
+  transform: translateY(-3rem) scale(1.4);
+}
+.menu-option .chef-card:hover .description > ul {
+  opacity: 1;
+  transform: scale(1.5);
+}
+@media (max-width: 425px) {
+  .menu-option .menu-type .chef-img-section > img {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+@media (max-width: 375px) {
+  .description > h5 {
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .menu-option .menu-type .chef-img-section > img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/* homepage reservatin section */
+.HomePageFooter {
+  background-image: url("/public/images/bg2.homePage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100%;
+  position: relative;
+}
+.HomePageFooterOverlay::after {
+  content: "";
+  background-color: rgba(77, 75, 75, 0.397);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+.HomePageFooter > .cmt {
+  padding: 4rem;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 100%;
+  z-index: 100;
+}
+.HomePageFooter > .cmt > p {
+  font-size: 3rem;
+  font-style: italic;
+  color: #ffffff;
+  font-weight: bold;
+}
+@media (max-width: 992px) {
+  .HomePageFooter > .cmt > p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .HomePageFooter > .cmt > p {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 320px) {
+  .HomePageFooter > .cmt > p {
+    font-size: 1.4rem;
+  }
 }
