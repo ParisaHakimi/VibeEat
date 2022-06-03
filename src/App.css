@@ -17,6 +17,13 @@ a {
   text-decoration: none;
 }
 
+.NavigationMenu {
+  background-color: rgba(51, 51, 51, 0.9);
+  /* position: absolute; */
+}
+.NavigationMenu button {
+  background-color: aliceblue;
+}
 .header {
   background-image: url("/public/images/heroBg.jpg");
   background-repeat: no-repeat;
@@ -24,18 +31,15 @@ a {
   background-size: cover;
   min-height: 100vh;
   max-width: 100%;
-}
-.header nav {
-  background-color: rgba(51, 51, 51, 0.9);
-}
-.header nav button {
-  background-color: aliceblue;
+  position: relative;
 }
 .header .cmt {
-  margin: 6rem auto;
   padding: 4rem;
   text-align: center;
   background-color: rgba(51, 51, 51, 0.5);
+  position: absolute;
+  top: 6rem;
+  left: 0;
 }
 .header .cmt .orderLink,
 .learnMore-aboutUs,
@@ -268,5 +272,109 @@ a {
 @media (max-width: 320px) {
   .HomePageFooter > .cmt > p {
     font-size: 1.4rem;
+  }
+}
+
+/* About us page */
+.about-page-header {
+  min-height: 50vh;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-page-hero-img {
+  width: 49%;
+  min-height: 5rem;
+}
+.about-page-header .abt {
+  padding: 2rem;
+  width: 45%;
+  text-align: center;
+}
+.kitchen {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  align-items: center;
+  justify-content: space-between;
+}
+.kitchen .kitchen-img {
+  width: 30%;
+  height: 30rem;
+}
+.kitchen .our-kitchen {
+  padding: 2rem;
+  width: 60%;
+}
+@media (max-width: 1200px) {
+  .about-page-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-page-header .abt {
+    width: 90%;
+  }
+  .about-page-hero-img {
+    width: 50%;
+    height: 50vh;
+  }
+  .kitchen {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .kitchen .kitchen-img {
+    width: 40%;
+  }
+  .kitchen .our-kitchen {
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .about-page-hero-img {
+    width: 50%;
+    height: 45vh;
+  }
+  .kitchen .kitchen-img {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .about-page-hero-img {
+    width: 80%;
+  }
+  .kitchen .kitchen-img {
+    width: 60%;
+    height: 25rem;
+  }
+}
+@media (max-width: 649px) {
+  .about-page-hero-img {
+    width: 80%;
+    height: 40vh;
+  }
+}
+@media (max-width: 552px) {
+  .kitchen .kitchen-img {
+    width: 60%;
+    height: 20rem;
+  }
+}
+@media (max-width: 425px) {
+  .about-page-header .abt {
+    text-align: left;
+  }
+  .kitchen .kitchen-img {
+    width: 100%;
+    height: 20rem;
+  }
+}
+@media (max-width: 375px) {
+  .about-page-hero-img {
+    height: 30vh;
+  }
+  .kitchen .our-kitchen {
+    text-align: left;
   }
 }

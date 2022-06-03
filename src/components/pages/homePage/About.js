@@ -18,7 +18,10 @@ const About = () => {
               reiciendis accusamus. Harum reprehenderit similique est eius
               facilis repellat commodi praesentium voluptatibus
             </p>
-            <a href="/" className="text-light learnMore-aboutUs">
+            <a
+              href="../about-us-page/AboutUs"
+              className="text-light learnMore-aboutUs"
+            >
               Learn more...
             </a>
           </div>

@@ -1,26 +1,20 @@
 import "./App.css";
-import Header from "./components/layout/Header";
-import About from "./components/layout/About";
-import Menu from "./components/layout/Menu";
-import ChefSection from "./components/layout/ChefSection";
-import HomePageFooter from "./components/layout/HomePageFooter";
-import AboutUs from "./components/pages/AboutUs";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavigationMenu from "./components/layout/NavigationMenu";
+import HomePage from "./components/pages/homePage/HomePage";
+import AboutUs from "./components/pages/about-us-page/AboutUs";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div
-        className="container"
-        style={{ backgroundColor: "#f6f6f6", paddingBottom: "5rem" }}
-      >
-        <About />
-        <Menu />
-        <ChefSection />
+    <Router>
+      <div className="App">
+        <NavigationMenu />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
       </div>
-      <HomePageFooter />
-      <AboutUs />
-    </div>
+    </Router>
   );
 }
 
